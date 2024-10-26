@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<body>
+    <h2>Amazing Images</h2>
+    <div>
+        <ul id="Images">
+            <li onclick="this.style.color='red'">
+               <img id="city" onclick="greet()" width=200 src="https://images.pexels.com/photos/1563256/pexels-photo-1563256.jpeg?cs=srgb&dl=pexels-rickyrecap-1563256.jpg&fm=jpg" alt="">
+               i am city
+            </li>
+            <li>
+                <img id="road" width=200 src="https://images.unsplash.com/photo-1542242476-5a3565835a38?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8cm9hZHxlbnwwfHwwfHx8MA%3D%3D" alt="">
+
+            </li>
+            <li>
+                <img id="home" width=200 src="https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?cs=srgb&dl=pexels-binyaminmellish-106399.jpg&fm=jpg" alt="">
+            </li>
+            <li>
+                <img id="sea" width=200 src="https://images.unsplash.com/photo-1471922694854-ff1b63b20054?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8c2VhfGVufDB8fDB8fHww" alt="">
+            </li>
+            <li>
+                <a onclick="greet()" id="google" href="https://www.google.com/">I am google</a>
+            </li>
+
+        </ul>
+    </div>
+    <script>
+        
+//         function greet()
+// {
+//     alert("i am cities")
+// }
+// click()
+// road.onclick=()=>{
+//     alert("i am road")
+// }
+// home.addEventListener('click',()=> // by method on element
+// {
+//     alert("i am home")
+// })
+// home.addEventListener('click',(e)=>
+// {
+//     console.log(e.target.parentNode.remove()) // checkout the mane of event(pointer event)
+// })
+// Images.addEventListener('click',(e)=>
+// {
+//     console.log(e.target.parentNode.remove())
+// })
+// google.onclick=(e)=>{
+//     e.preventDefault()
+// }
+//propogation(where it write it stops the execution-here it stops the inner propogation)
+
+ Images.addEventListener('click',(e)=>
+ {
+     console.log("i am images url")
+ },true)
+ google.onclick=(e)=>{
+     e.preventDefault()
+     e.stopPropagation()
+     console.log("i am google")
+ }
+// true makes it prioritise
+
+//  e.stopPropogation()
+
+
+   </script>
+
+    
+</body>
+</html>
